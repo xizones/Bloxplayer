@@ -84,6 +84,10 @@ end
 function bloxPlayer.BloxPlayer_ERROR_HANDLER(Error) --> should ONLY be used in a xpcall statment
     local statuscode = spotify.Last_Status_Code
     local statusmessage = spotify.Last_Status_Message
+
+    if statuscode ~= 200 then
+        
+    end
 end
 
 
