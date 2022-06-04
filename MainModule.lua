@@ -55,10 +55,12 @@ bloxPlayer.checkKey = function(key)
     })
 
     if getgenv().response.StatusCode == 401 then
-       
+        spotify.Last_Status_Code = getgenv().response.StatusCode
+        spotify.Last_Status_Message = getgenv().response.StatusMessage
         return false
     else
-        
+        spotify.Last_Status_Code = getgenv().response.StatusCode
+        spotify.Last_Status_Message = getgenv().response.StatusMessage
         return true
     end
 end
