@@ -80,6 +80,7 @@ function bloxPlayer.BloxPlayer_ERROR_HANDLER(Error) --> should ONLY be used in a
     if statuscode ~= 200 then
         print("BLOXPLAYER:ERROR:SPOIFY\nSTATUS:"..statuscode.."\nMESSAGE:"..statusmessage)
     end
+    if Error then print(Error) end
 end
 
 return bloxPlayer
