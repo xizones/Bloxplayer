@@ -60,6 +60,7 @@ bloxPlayer.checkKey = function(self, key)
     })
 
     if getgenv().response.StatusCode == 401 then
+        
         return false
     else
         self.RegisteredKey = key
@@ -95,12 +96,5 @@ end
 
 
 
-
-spawn(function()
-    while wait(5) do
-        spotify.Last_Status_Code = getgenv().response.StatusCode
-        spotify.Last_Status_Message = getgenv().response.StatusMessage
-    end
-end)
 
 return bloxPlayer
