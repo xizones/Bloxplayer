@@ -76,7 +76,7 @@ function bloxPlayer.BloxPlayer_ERROR_HANDLER(Error) --> should ONLY be used in a
     local statusmessage = spotify.Last_Status_Message
 
     if statuscode ~= 200 then
-        
+        print("BLOXPLAYER:ERROR:SPOIFY\nSTATUS:"..statuscode.."\nMESSAGE:"..statusmessage)
     end
 end
 
