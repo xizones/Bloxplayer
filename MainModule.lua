@@ -43,7 +43,7 @@ bloxPlayer.RegisteredKey = nil
 local HttpService = game:GetService("HttpService")
 
 
-bloxPlayer.checkKey = function(self, key)
+bloxPlayer.checkKey = function(key)
     getgenv().response = REQUEST_FUNC({
         Url = "https://api.spotify.com/v1/me/player/currently-playing",
         Headers = {
@@ -55,10 +55,12 @@ bloxPlayer.checkKey = function(self, key)
     })
 
     if getgenv().response.StatusCode == 401 then
-
+        spotify.Last_Status_Code = getgenv().response.StatusCode
+        spotify.Last_Status_Message = getgenv().response.StatusMessage
         return false
     else
-        self.RegisteredKey = key
+        spotify.Last_Status_Code = getgenv().response.StatusCode
+        spotify.Last_Status_Message = getgenv().response.StatusMessage
         return true
     end
 end
