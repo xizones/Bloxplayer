@@ -19,7 +19,7 @@ local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local UICorner_2 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-local TextButton = Instance.new("TextButton")
+funcs.TextButton = Instance.new("TextButton")
 local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
@@ -83,19 +83,19 @@ TextBox.TextWrapped = true
 UITextSizeConstraint_2.Parent = TextBox
 UITextSizeConstraint_2.MaxTextSize = 29
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BackgroundTransparency = 1.000
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.0351357944, 0, 0.678082228, 0)
-TextButton.Size = UDim2.new(0.928571403, 0, 0.239726022, 0)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Enter API key"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextScaled = true
-TextButton.TextSize = 51.000
-TextButton.TextWrapped = true
-TextButton.MouseButton1Click:Connect(function()
+funcs.TextButton.Parent = Frame
+funcs.TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+funcs.TextButton.BackgroundTransparency = 1.000
+funcs.TextButton.BorderSizePixel = 0
+funcs.TextButton.Position = UDim2.new(0.0351357944, 0, 0.678082228, 0)
+funcs.TextButton.Size = UDim2.new(0.928571403, 0, 0.239726022, 0)
+funcs.TextButton.Font = Enum.Font.SourceSans
+funcs.TextButton.Text = "Enter API key"
+funcs.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+funcs.TextButton.TextScaled = true
+funcs.TextButton.TextSize = 51.000
+funcs.TextButton.TextWrapped = true
+funcs.TextButton.MouseButton1Click:Connect(function()
 	funcs.OnKeySent(TextBox.Text)
 end)
 UITextSizeConstraint_3.Parent = TextButton
