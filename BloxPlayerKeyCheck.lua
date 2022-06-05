@@ -1,5 +1,5 @@
 local funcs = {}
-
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("KeyCheck") then game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("KeyCheck"):Destroy() end
 function funcs.OnKeySent(c)
 	return c
 end
